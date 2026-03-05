@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Rania Bennani – Étudiante ingénieure en Intelligence Artificielle & Data Science à l'EMSI Rabat." />
+  <meta name="keywords" content="Rania Bennani, Data Science, Machine Learning, IA, EMSI, Rabat, portfolio" />
+  <meta name="author" content="Rania Bennani" />
+  <title>Rania Bennani · IA & Data Science</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">RB<span class="accent">.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO
+       ================================================ -->
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+
+  <section id="hero">
+    <div class="hero-content">
+
+      <!-- Badge disponibilité -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible · A la recherche d'un stage PFA de deux mois pour Juillet 2025
+      </div>
+
+      <!-- Titre principal -->
+      <h1 class="hero-title">
+        <span class="line">Rania</span>
+        <span class="line">Bennani</span>
+        <span class="line hero-sub-title">IA & Data Science</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="hero-desc">
+        Étudiante en 4<sup>e</sup> année Cycle Ingénieur à l'EMSI Rabat, filière Intelligence Artificielle et Sciences des Données. Je construis des modèles rigoureux, de l'exploration des données à la validation des résultats.
+      </p>
+
+      <!-- Boutons CTA -->
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-code-branch"></i> Voir mes projets
+        </a>
+        <a href="CV_BENNANI_Rania.pdf" download class="btn btn-outline">
+          <i class="fa-solid fa-download"></i> Télécharger CV
+        </a>
+      </div>
+
+      <!-- Mini-stats sous le héro -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num">3</span>
+          <span class="hstat-label">Projets</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-num">2</span>
+          <span class="hstat-label">Stages</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-num">12+</span>
+          <span class="hstat-label">Technologies</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-num">3</span>
+          <span class="hstat-label">Certifications</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Visual décoratif côté droit -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="code-block">
+        <div class="cb-header">
+          <span class="cb-dot red"></span>
+          <span class="cb-dot yellow"></span>
+          <span class="cb-dot green"></span>
+          <span class="cb-fname">model.py</span>
+        </div>
+        <pre class="cb-code"><code><span class="c-kw">from</span> sklearn.ensemble <span class="c-kw">import</span> RandomForestRegressor
+<span class="c-kw">from</span> sklearn.model_selection <span class="c-kw">import</span> cross_val_score
+<span class="c-kw">import</span> numpy <span class="c-kw">as</span> np
+
+<span class="c-comment"># Entraînement du modèle</span>
+model = RandomForestRegressor(
+    n_estimators=<span class="c-num">200</span>,
+    max_depth=<span class="c-num">12</span>,
+    random_state=<span class="c-num">42</span>
+)
+model.fit(X_train, y_train)
+
+<span class="c-comment"># Validation croisée k=5</span>
+scores = cross_val_score(
+    model, X, y,
+    cv=<span class="c-num">5</span>, scoring=<span class="c-str">'neg_root_mean_squared_error'</span>
+)
+rmse = np.mean(-scores)
+<span class="c-comment"># ✓ Modèle validé</span></code></pre>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================================================
+       1. PROFIL  (anciennement "À propos")
+       ================================================ -->
+  <section id="profil" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Qui suis-je ?</h2>
+
+      <div class="about-grid">
+
+        <!-- Colonne texte -->
+        <div class="about-text reveal">
+          <p class="about-intro">
+            Je suis étudiante en <strong>4<sup>e</sup> année Cycle Ingénieur Informatique & Réseaux</strong>, filière Intelligence Artificielle et Sciences des Données, à l'<strong>École Marocaine des Sciences de l'Ingénieur (EMSI)</strong> de Rabat.
+          </p>
+          <p>
+            Mon intérêt pour la data vient d'une conviction simple : bien exploitées, les données permettent de prendre de meilleures décisions. Je m'applique à construire des pipelines rigoureux - du nettoyage à la validation - et à comprendre les fondements mathématiques avant d'utiliser les bibliothèques.
+          </p>
+          <p>
+            Mes stages au <strong>CDG</strong> et à l'<strong>ICESCO</strong> m'ont exposée aux contraintes d'un contexte professionnel réel : gestion de projet, cycle de développement complet, communication technique.
+          </p>
+          <p>
+            Je cherche un <strong>stage PFA de deux mois pour juillet 2025</strong>, dans un environnement Machine Learning ou Data Science où je pourrai contribuer concrètement.
+          </p>
+
+          <!-- Qualités clés -->
+          <div class="strength-tags">
+            <span class="strength-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Analyse & modélisation</span>
+            <span class="strength-tag"><i class="fa-solid fa-flask-vial"></i> Rigueur scientifique</span>
+            <span class="strength-tag"><i class="fa-solid fa-file-code"></i> Documentation structurée</span>
+            <span class="strength-tag"><i class="fa-solid fa-lightbulb"></i> Autonomie technique</span>
+          </div>
+        </div>
+
+        <!-- Colonne cartes info -->
+        <div class="about-cards reveal">
+
+          <div class="info-card">
+            <i class="fa-solid fa-graduation-cap card-icon"></i>
+            <div>
+              <strong>EMSI Rabat - Cycle Ingénieur</strong>
+              <p>Ingénierie Informatique & Réseaux · Filière IA & Data Science · 2022 → Présent</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-location-dot card-icon"></i>
+            <div>
+              <strong>Rabat, Maroc</strong>
+              <p>Disponible pour un stage à partir de juillet 2025 · 2 mois</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-language card-icon"></i>
+            <div>
+              <strong>Langues</strong>
+              <p>Arabe (maternelle) · Français C1 - DALF · Anglais Intermediate 5 - ALC</p>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="info-card">
+            <i class="fa-solid fa-certificate card-icon"></i>
+            <div>
+              <strong>Certifications</strong>
+              <p>
+                Python for Data Science, AI & Development - <em>IBM</em><br>
+                The Unix Workbench - <em>Johns Hopkins University</em><br>
+                HTML, CSS & Javascript for Web Developers - <em>Johns Hopkins University</em>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       2. PARCOURS  (en 2ème position)
+       ================================================ -->
+  <section id="parcours" class="section">
+    <div class="container">
+      <h2 class="section-title">Formation & Expérience</h2>
+
+      <!-- Sous-titre Éducation -->
+      <p class="parcours-group-title"><i class="fa-solid fa-graduation-cap"></i> Éducation</p>
+      <div class="timeline reveal">
+
+        <!-- EMSI -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-date"><i class="fa-regular fa-calendar"></i> 2022 → Présent</p>
+            <h4>Cycle Ingénieur - EMSI Rabat</h4>
+            <p>Ingénierie Informatique & Réseaux, filière <strong>Intelligence Artificielle & Sciences des Données</strong>. Formation couvrant algorithmique, machine learning, bases de données, réseaux et développement logiciel.</p>
+            <div class="tl-tags">
+              <span>IA</span>
+              <span>Data Science</span>
+              <span>Informatique</span>
+              <span>Réseaux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bac -->
+        <div class="tl-item tl-future">
+          <div class="tl-dot tl-dot-outline"></div>
+          <div class="tl-content">
+            <p class="tl-date"><i class="fa-regular fa-calendar"></i> 2022</p>
+            <h4>Baccalauréat Sciences SVT - Lycée scientifique, Rabat</h4>
+            <p>Filière Sciences de la Vie et de la Terre.</p>
+            <div class="tl-tags">
+              <span>Sciences</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sous-titre Expérience -->
+      <p class="parcours-group-title" style="margin-top: 56px;"><i class="fa-solid fa-briefcase"></i> Expérience</p>
+      <div class="timeline reveal">
+
+        <!-- CDG -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-date"><i class="fa-regular fa-calendar"></i> Juillet 2025</p>
+            <h4>Stage - CDG · Caisse de Dépôt et de Gestion</h4>
+            <p>Stage d'un mois au département Informatique. Développement d'un site web de <strong>Suivi des Contrats de Maintenance</strong> - conception, frontend, backend et base de données.</p>
+            <div class="tl-tags">
+              <span>Développement web</span>
+              <span>Stage professionnel</span>
+              <span>Rabat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ICESCO -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <p class="tl-date"><i class="fa-regular fa-calendar"></i> Juillet 2024</p>
+            <h4>Stage - ICESCO · Organisation du Monde Islamique pour l'Éducation, les Sciences et la Culture</h4>
+            <p>Stage d'observation d'un mois au département Informatique. Observation et participation au processus de développement web complet : <strong>conception, frontend, backend, bases de données</strong>.</p>
+            <div class="tl-tags">
+              <span>Observation professionnelle</span>
+              <span>Full Stack</span>
+              <span>Rabat</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       3. COMPÉTENCES
+       ================================================ -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Compétences techniques</h2>
+      <p class="section-sub">Technologies utilisées dans mes projets académiques et stages.</p>
+
+      <div class="skills-categories">
+
+        <!-- IA & Data Science -->
+        <div class="reveal">
+          <p class="skill-group-title">IA & Data Science</p>
+          <div class="skill-cards">
+
+            <div class="skill-card">
+              <i class="fa-brands fa-python"></i>
+              <span>Python (ML)</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="85"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-robot"></i>
+              <span>scikit-learn</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="80"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-table"></i>
+              <span>NumPy / Pandas</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="80"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Matplotlib</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="75"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-brain"></i>
+              <span>Machine Learning</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="78"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bases de données -->
+        <div class="reveal">
+          <p class="skill-group-title">Bases de données</p>
+          <div class="skill-cards">
+
+            <div class="skill-card">
+              <i class="fa-solid fa-database"></i>
+              <span>MySQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="78"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-database"></i>
+              <span>PL/SQL (Oracle)</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="72"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-server"></i>
+              <span>T-SQL (SQL Server)</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="70"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-leaf"></i>
+              <span>NoSQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="60"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Langages & Dev -->
+        <div class="reveal">
+          <p class="skill-group-title">Langages & Développement</p>
+          <div class="skill-cards">
+
+            <div class="skill-card">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="70"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML / CSS</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="75"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-php"></i>
+              <span>PHP</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="65"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-c"></i>
+              <span>C / C++ / C#</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="70"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-java"></i>
+              <span>Java</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="68"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-react"></i>
+              <span>React</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="60"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Outils -->
+        <div class="reveal">
+          <p class="skill-group-title">Outils & Environnements</p>
+          <div class="skill-cards">
+
+            <div class="skill-card">
+              <i class="fa-brands fa-linux"></i>
+              <span>Ubuntu / CentOS</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="70"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-solid fa-code"></i>
+              <span>VS Code / Eclipse</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="80"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-python"></i>
+              <span>Django</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="62"></div></div>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-android"></i>
+              <span>Android Studio</span>
+              <div class="skill-bar"><div class="skill-fill" data-target="58"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       4. PROJETS
+       ================================================ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projets académiques</h2>
+
+      <div class="projects-grid">
+
+        <!-- ---- PROJET 1 : Prédiction prix immobiliers ---- -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <span class="project-tag tag-blue">Régression supervisée</span>
+            <span class="project-result"><i class="fa-solid fa-circle-check"></i> RMSE & R² évalués</span>
+          </div>
+
+          <h3>Prédiction de prix immobiliers</h3>
+          <p class="project-desc">
+            Pipeline ML complet pour prédire les prix de logements. Comparaison Linear Regression vs Random Forest avec validation croisée k-fold et analyse des erreurs.
+          </p>
+
+          <div class="project-method">
+            <div class="method-step">
+              <span class="ms-num">1</span>
+              <span>Exploration des données - distributions, corrélations, valeurs aberrantes.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">2</span>
+              <span>Prétraitement - imputation, encodage des catégorielles, normalisation.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">3</span>
+              <span>Feature engineering - création de variables composites pertinentes.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">4</span>
+              <span>Comparaison Linear Regression / Random Forest - validation croisée 5-fold.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">5</span>
+              <span>Évaluation finale sur jeu de test séparé - RMSE, MAE, R².</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <span>Python</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+          </div>
+
+          <a href="https://github.com/Rania0497" target="_blank" class="btn-github">
+            <i class="fa-brands fa-github"></i> Voir sur GitHub
+          </a>
+        </article>
+
+        <!-- ---- PROJET 2 : Planification A* ---- -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <span class="project-tag">Algorithme IA</span>
+            <span class="project-result"><i class="fa-solid fa-circle-check"></i> Optimalité garantie</span>
+          </div>
+
+          <h3>Planification de trajets avec A*</h3>
+          <p class="project-desc">
+            Implémentation de l'algorithme A* pour optimiser les déplacements d'un robot dans un entrepôt avec obstacles. Visualisation dynamique de l'exploration et du chemin optimal.
+          </p>
+
+          <div class="project-method">
+            <div class="method-step">
+              <span class="ms-num">1</span>
+              <span>Modélisation de la grille d'entrepôt avec obstacles statiques et dynamiques.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">2</span>
+              <span>Définition de f(n) = g(n) + h(n) - coût réel + heuristique de Manhattan.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">3</span>
+              <span>Implémentation de la file de priorité (heapq) pour l'open list.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">4</span>
+              <span>Visualisation Matplotlib - nœuds explorés, chemin final, performance.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">5</span>
+              <span>Comparaison A* vs BFS en termes de nœuds explorés et longueur de chemin.</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <span>Python</span><span>Matplotlib</span><span>heapq</span><span>NumPy</span>
+          </div>
+
+          <a href="https://github.com/Rania0497" target="_blank" class="btn-github">
+            <i class="fa-brands fa-github"></i> Voir sur GitHub
+          </a>
+        </article>
+
+        <!-- ---- PROJET 3 : Régression linéaire from scratch ---- -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <span class="project-tag tag-teal">Traitement par régression linéaire</span>
+            <span class="project-result"><i class="fa-solid fa-circle-check"></i> Sans bibliothèque ML</span>
+          </div>
+
+          <h3>Régression linéaire & données manquantes</h3>
+          <p class="project-desc">
+            Implémentation manuelle de la régression linéaire (descente de gradient) en NumPy pur pour traiter les valeurs manquantes - sans scikit-learn. Objectif : maîtriser les fondements avant les boîtes noires.
+          </p>
+
+          <div class="project-method">
+            <div class="method-step">
+              <span class="ms-num">1</span>
+              <span>Analyse des patterns de valeurs manquantes - MCAR, MAR, MNAR.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">2</span>
+              <span>Implémentation de la descente de gradient par batch en NumPy pur.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">3</span>
+              <span>Calcul analytique du gradient - mise à jour des poids, régularisation L2.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">4</span>
+              <span>Imputation des valeurs manquantes via le modèle entraîné.</span>
+            </div>
+            <div class="method-step">
+              <span class="ms-num">5</span>
+              <span>Comparaison avec l'imputation par moyenne/médiane - MSE et R².</span>
+            </div>
+          </div>
+
+          <div class="project-tech">
+            <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span>
+          </div>
+
+          <a href="https://github.com/Rania0497" target="_blank" class="btn-github">
+            <i class="fa-brands fa-github"></i> Voir sur GitHub
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       5. STATISTIQUES
+       ================================================ -->
+  <section id="stats" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">En chiffres</h2>
+      <p class="section-sub">Un aperçu de mon parcours jusqu'ici.</p>
+
+      <div class="stats-row reveal">
+
+        <div class="stat-item">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Projets réalisés</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-label">Stages effectués</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Langages maîtrisés</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Certifications obtenues</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       6. CONTACT
+       Ordre : Téléphone → Email → LinkedIn
+       ================================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Me contacter</h2>
+      <p class="contact-sub">
+        Disponible pour un <strong>stage PFA de deux mois pour Juillet 2025</strong>.<br>
+        N'hésitez pas à me contacter pour toute opportunité en IA ou Data Science.
+      </p>
+
+      <div class="contact-links reveal">
+
+        <!-- Téléphone en premier -->
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <span>06 97 95 51 60</span>
+        </div>
+
+        <!-- Email en deuxième -->
+        <a href="mailto:bennanirania97@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <span>bennanirania97@gmail.com</span>
+        </a>
+
+        <!-- LinkedIn en troisième -->
+        <a href="https://www.linkedin.com/in/rania-bennani-9638b5357/" target="_blank" class="contact-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>linkedin.com/in/Rania-Bennani</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="nav-logo" style="font-size:1.2rem;">RB<span class="accent">.</span></p>
+      <p>© 2025 Rania Bennani · EMSI Rabat · IA &amp; Data Science</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
